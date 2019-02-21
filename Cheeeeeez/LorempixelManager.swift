@@ -1,10 +1,11 @@
 import Foundation
+import UIKit
 
 class LorempixelManager {
     
-    static var imageData = Data()
+    static var photoImage: UIImage!
     
-    static func generateRandomImage()  {
+    static func generateRandomImage(completion: @escaping (_ image: UIImage) -> Void) {
         
         let imageStr = "http://lorempixel.com/400/200/sports/"
         let imageURL = URL(string: imageStr)
@@ -22,12 +23,14 @@ class LorempixelManager {
                 return
             }
             
-            DispatchQueue.main.async {
-                if let data = responseData {
-                    self.imageData = data
-                    return
-                }
+            if let data = responseData {
+                
+                photoImage = UIImage(data: data)
             }
+            
+            DispatchQueue.main.async {
+                completion(photoImage)
+                }
             
         }
         task.resume()

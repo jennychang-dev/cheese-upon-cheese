@@ -5,7 +5,7 @@ class ForasmaticManager {
     static var quoteText: String = ""
     static var quoteAuthor: String = ""
     
-    static func generateCheesyQuote() {
+    static func generateCheesyQuote(completion: @escaping (_ quote: String, _ author: String) -> Void) {
         
         let quoteURLStr = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json"
         let url = URL(string: quoteURLStr)
@@ -42,16 +42,20 @@ class ForasmaticManager {
                     fatalError("cannot retrieve author")
                 }
                 
-                
-                self.quoteText = quote as? String ?? ""
-                self.quoteAuthor = author as? String ?? ""
-                
-                print(self.quoteText)
-                print(self.quoteAuthor)
+                DispatchQueue.main.async {
+                    self.quoteText = quote as? String ?? ""
+                    self.quoteAuthor = author as? String ?? ""
+                    
+                    completion(self.quoteText, self.quoteAuthor)
+                    
+                    print("\(self.quoteText) - \(self.quoteAuthor)")
+                }
                 
             }
+            
         }
         task.resume()
-        
+    }
+    
 }
-}
+
