@@ -54,13 +54,22 @@ class GenerateStuffViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let realm = try! Realm()
-//        let quotes = try! realm.objects(QuoteManager.self)
-//        
-//        for quote in quotes {
-//            print(quote.authorName)
-//            print(quote.quoteName)
-//        }
+        LorempixelManager.generateRandomImage { image in
+            
+            self.photoView.image = image
+            
+        }
+        
+        ForasmaticManager.generateCheesyQuote(completion: {
+            
+            (quoteText, quoteAuthor) in
+            
+            self.quoteLabel.text = quoteText
+            self.authorLabel.text = quoteAuthor
+            
+            
+        })
+        
     }
     
 }
