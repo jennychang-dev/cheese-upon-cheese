@@ -36,22 +36,31 @@ class GenerateStuffViewController: UIViewController {
     
     @IBAction func saveAll(_ sender: Any) {
         
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
         let myQuote = QuoteManager()
-        myQuote.quoteName = "hello be fabulous"
-        myQuote.authorName = "JC"
-        myQuote.photo = nil
+        myQuote.quoteName = quoteLabel.text ?? ""
+        myQuote.authorName = authorLabel.text ?? ""
+        myQuote.photo = photoView.image?.pngData()
         
         let realm = try! Realm()
         try! realm.write {
             realm.add(myQuote)
         }
         
+        let quotes = realm.objects(QuoteManager.self)
+        print(quotes)
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+//        let realm = try! Realm()
+//        let quotes = try! realm.objects(QuoteManager.self)
+//        
+//        for quote in quotes {
+//            print(quote.authorName)
+//            print(quote.quoteName)
+//        }
     }
     
 }

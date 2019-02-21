@@ -18,6 +18,8 @@
 		B299F14F221DE6160081100B /* LorempixelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299F14E221DE6160081100B /* LorempixelManager.swift */; };
 		B299F151221DEA830081100B /* ForasmaticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299F150221DEA830081100B /* ForasmaticManager.swift */; };
 		B299F185221E17550081100B /* QuoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B299F184221E17540081100B /* QuoteManager.swift */; };
+		B2BD1FFA221E486B003F179A /* QuoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BD1FF9221E486B003F179A /* QuoteTableViewController.swift */; };
+		B2BD1FFC221E48E0003F179A /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BD1FFB221E48E0003F179A /* QuoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		B299F14E221DE6160081100B /* LorempixelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LorempixelManager.swift; sourceTree = "<group>"; };
 		B299F150221DEA830081100B /* ForasmaticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForasmaticManager.swift; sourceTree = "<group>"; };
 		B299F184221E17540081100B /* QuoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteManager.swift; sourceTree = "<group>"; };
+		B2BD1FF9221E486B003F179A /* QuoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewController.swift; sourceTree = "<group>"; };
+		B2BD1FFB221E48E0003F179A /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
 		C761C6D1A2D38925C6DD9FFF /* Pods-CheeeeeezTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CheeeeeezTests.release.xcconfig"; path = "Target Support Files/Pods-CheeeeeezTests/Pods-CheeeeeezTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +122,8 @@
 				B299F12E221DE2570081100B /* AppDelegate.swift */,
 				B299F130221DE2570081100B /* GenerateStuffViewController.swift */,
 				B299F132221DE2570081100B /* Main.storyboard */,
+				B2BD1FF9221E486B003F179A /* QuoteTableViewController.swift */,
+				B2BD1FFB221E48E0003F179A /* QuoteTableViewCell.swift */,
 				B299F14E221DE6160081100B /* LorempixelManager.swift */,
 				B299F184221E17540081100B /* QuoteManager.swift */,
 				B299F150221DEA830081100B /* ForasmaticManager.swift */,
@@ -317,6 +323,8 @@
 				B299F185221E17550081100B /* QuoteManager.swift in Sources */,
 				B299F14F221DE6160081100B /* LorempixelManager.swift in Sources */,
 				B299F151221DEA830081100B /* ForasmaticManager.swift in Sources */,
+				B2BD1FFC221E48E0003F179A /* QuoteTableViewCell.swift in Sources */,
+				B2BD1FFA221E486B003F179A /* QuoteTableViewController.swift in Sources */,
 				B299F12F221DE2570081100B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
