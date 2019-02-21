@@ -7,7 +7,7 @@ class LorempixelManager {
     
     static func generateRandomImage(completion: @escaping (_ image: UIImage) -> Void) {
         
-        let imageStr = "http://lorempixel.com/400/200/sports/"
+        let imageStr = "http://lorempixel.com/400/200/"
         let imageURL = URL(string: imageStr)
         let sessionTask = URLSession.shared
         
